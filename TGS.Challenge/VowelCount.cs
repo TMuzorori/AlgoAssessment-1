@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace TGS.Challenge
 {
@@ -16,7 +18,18 @@ namespace TGS.Challenge
     {
         public int Count(string value)
         {
-            return -1;
+            if (string.IsNullOrEmpty(value))
+                throw new ArgumentException();
+
+            var vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
+
+            string convertedvalue = value.ToLower();//convert the sting tolower before checking for vowels
+
+
+            int total = convertedvalue.Count(c => vowels.Contains(c));//using linq
+            Console.WriteLine("Your total number of vowels is: {0}", total);
+            return total;
+
         }
     }
 }

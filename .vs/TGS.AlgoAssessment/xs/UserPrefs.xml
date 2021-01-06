@@ -1,16 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="TGS.Challenge.Tests/VowelCountTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TGS.Challenge/VowelCount.cs">
     <Files>
-      <File FileName="TGS.Challenge.Tests/VowelCountTests.cs" Line="1" Column="1" />
+      <File FileName="TGS.Challenge.Tests/VowelCountTests.cs" Line="48" Column="68" />
+      <File FileName="TGS.Challenge/VowelCount.cs" Line="30" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TGS.AlgoAssessment" expanded="True">
-            <Node name="TGS.Challenge" expanded="True" />
-            <Node name="TGS.Challenge.Tests" expanded="True">
-              <Node name="VowelCountTests.cs" selected="True" />
+            <Node name="TGS.Challenge" expanded="True">
+              <Node name="VowelCount.cs" selected="True" />
             </Node>
+            <Node name="TGS.Challenge.Tests" expanded="True" />
           </Node>
         </State>
       </Pad>
