@@ -1,7 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="TGS.Challenge/VowelCount.cs">
     <Files>
-      <File FileName="TGS.Challenge.Tests/VowelCountTests.cs" Line="48" Column="68" />
       <File FileName="TGS.Challenge/VowelCount.cs" Line="30" Column="1" />
     </Files>
     <Pads>

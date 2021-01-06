@@ -27,7 +27,7 @@ namespace TGS.Challenge
 
 
             int total = convertedvalue.Count(c => vowels.Contains(c));//using linq
-            Console.WriteLine("Your total number of vowels is: {0}", total);
+
             return total;
 
         }
