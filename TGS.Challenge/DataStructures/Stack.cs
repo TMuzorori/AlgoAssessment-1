@@ -1,43 +1,70 @@
 using System;
+using System.Collections;
+
+
 
 namespace TGS.Challenge.DataStructures
 {
-  public class Stack<T>
-  {
-    private T[] _items;
-
-    public int Count
+    public class Stack<T>
     {
-      get { return this._items.Length; }
-    }
+        private T[] _items;
 
-    public Stack()
-    {
-      this._items = new T[] {};
-    }
+        private int index;
 
-    public void Push(T value)
-    {
-      Array.Resize(ref this._items, this._items.Length +1);
-      this._items.SetValue(value, this._items.GetUpperBound(0));
-    }
 
-    public T Peek()
-    {
-      return this._items.Length > 0 ? (T)this._items.GetValue(this._items.GetUpperBound(0)) : default(T);
-    }
+        public int Count
+        {
+            get { return this._items.Length; }
+        }
 
-    public T Pop()
-    {
-      var item = (T)this._items.GetValue(this._items.GetUpperBound(0));
+        public Stack()
+        {
+            this._items = new T[] { };
 
-      Array.Resize(ref this._items, this._items.Length -1);
+            this.index = 0;
 
-      return item;
+        }
+
+        public void Push(T value)
+        {
+            if (index == _items.Length)
+            {
+                Array.Resize(ref this._items, this._items.Length + 1);
+            }
+            _items[index] = value;
+            index++;
+
+        }
+
+        public T Peek()
+        {
+            if (index == 0)
+                throw new InvalidOperationException("Exception: Empty stack");
+
+            return _items[index - 1];
+
+
+        }
+
+        public T Pop()
+        {
+
+            if (index == 0)
+            {
+                throw new InvalidOperationException("Exception: Empty stack");
+            }
+            else
+            {
+                var poppeditem = _items[--index];
+                Array.Resize(ref this._items, this._items.Length - 1);
+                return poppeditem;
+            }
+
+        }
+        public void Clear()
+        {
+            this._items = new T[0];
+
+        }
     }
-    public void Clear()
-    {
-      this._items = new T[0];
-    }
-  }
 }
